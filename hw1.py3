@@ -1,5 +1,5 @@
-def pangram(inp, out):
-	out_arr = [[0 for i in range(0, 128)] for i in range(5)]
+def hw1(inp, out):
+	out_arr = [[0 for i in range(0, 123)] for i in range(5)]
 	inp_arr = []
 	f = open(inp, 'r')
 	l = open(out, 'w')
@@ -9,7 +9,7 @@ def pangram(inp, out):
 		for j in inp_arr[i]:
 			out_arr[i][ord(j)] += 1
 		flag = True
-		for j in range(97, 128):
+		for j in range(97, 123):
 			if (out_arr[i][j] < 1):
 				flag = False
 				break
@@ -20,5 +20,4 @@ def pangram(inp, out):
 	f.close()
 	l.close()
 
-
-pangram("sample_input_1.txt", "output_1.txt")
+hw1("sample_input_1.txt", "output_1_py.txt")
